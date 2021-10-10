@@ -1,0 +1,16 @@
+/* for index.html */
+
+.home-item {
+    display: flex;
+    align-items: center;
+}
+
+img#profile-photo {
+    width: 250px;
+    border-radius: 50%;
+    margin: 10px;
+}
+
+div#profile {
+    float: left;
+}

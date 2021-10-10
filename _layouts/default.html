@@ -4,18 +4,24 @@
 <head>
     <meta charset="utf-8">
     <title>{{ page.title }}</title>
+    <link rel="stylesheet" href="/css/normalize.css">
     <link rel="stylesheet" href="/css/style.css">
     {% if page.use_math %}{% include mathjax_support.html %}{% endif %}
 </head>
 
 <body>
-    <nav>
-        <a href="/">Younghan Park</a>
-        <a href="/blog">Blog</a>
-    </nav>
-    <section>
-        {{ content }}
-    </section>
+    <div class="container">
+        <div id="header">
+            <a href="/" class="nav-button" id="home">Younghan Park</a>
+            <a href="/blog" class="nav-button" id="blog">Blog</a>
+        </div>
+        <div id="main">
+            {{ content }}
+        </div>
+        <div id="footer">
+            Last updated: October 2021
+        </div>
+    </div>
 </body>
 
 </html>
