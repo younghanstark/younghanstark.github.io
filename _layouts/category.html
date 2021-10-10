@@ -1,0 +1,16 @@
+---
+layout: blog
+---
+
+<ul>
+  {% assign category = page.category | default: page.title %}
+  {% if category == "recent-posts" %}
+    {% for post in site.posts %}
+      <li><a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>{{ post.date | date_to_string }}</li>
+    {% endfor %}
+  {% else %}
+    {% for post_in_category in site.categories[category] %}
+      <li><a href="{{ site.baseurl }}{{ post_in_category.url }}">{{ post_in_category.title }}</a>{{ post_in_category.date | date_to_string }}</li>
+    {% endfor %}
+  {% endif %}
+</ul>
