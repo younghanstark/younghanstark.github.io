@@ -3,8 +3,8 @@
 /* for default.html */
 
 .container {
-    margin: 10px;
-    padding: 10px;
+    margin: 1%;
+    padding: 1%;
     font-family: 'Noto Sans KR', sans-serif;
     width: 100%;
     max-width: 800px;
@@ -13,7 +13,7 @@
 }
 
 div#main {
-    padding: 20px;
+    padding: 2%;
 }
 
 div#header {
@@ -43,7 +43,7 @@ a:hover {
 
 /* for blog.html */
 
-div.label {
+div.category-label {
     font-size: 20px;
     font-weight: bold;
 }

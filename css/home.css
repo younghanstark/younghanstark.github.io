@@ -6,9 +6,9 @@
 }
 
 img#profile-photo {
-    width: 250px;
+    width: 30%;
     border-radius: 50%;
-    margin: 10px;
+    margin: 2%;
 }
 
 div#profile {

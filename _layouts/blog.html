@@ -2,8 +2,10 @@
 layout: default
 ---
 
+<link rel="stylesheet" href="/css/article.css">
+
 <div id="nav-category">
-    <div class="label">Categories</div>
+    <div class="category-label">Categories</div>
     <ul id="category">
         {% for page in site.pages %}
             {% if page.layout == "category" and page.category != "recent-posts" %}
@@ -13,5 +15,5 @@ layout: default
     </ul>
 </div>
 
-<div class="label">{{ page.title }}</div>
-<div class="content">{{ content }}</div>
+<div id="article-title">{{ page.title }}</div>
+<div id="article-content">{{ content }}</div>

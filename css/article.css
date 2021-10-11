@@ -1,0 +1,18 @@
+div#article-title {
+    font-size: 2em;
+    font-weight: bold;
+    border-bottom: 2px solid black;
+    padding-bottom: 1%;
+}
+
+div#article-content h1 {
+    font-size: 1.8em;
+}
+
+div#article-content h2 {
+    font-size: 1.6em;
+}
+
+div#article-content h3 {
+    font-size: 1.4em;
+}
