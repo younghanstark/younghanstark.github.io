@@ -2,6 +2,10 @@
 
 /* for default.html */
 
+html {
+    -webkit-text-size-adjust: auto;
+}
+
 .container {
     margin: 1%;
     padding: 1%;
