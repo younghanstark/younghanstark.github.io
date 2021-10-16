@@ -1,18 +1,37 @@
-div#article-title {
-    font-size: 2em;
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap');
+
+#article-title {
+    font-size: 28px;
     font-weight: bold;
     border-bottom: 2px solid black;
     padding-bottom: 1%;
 }
 
-div#article-content h1 {
-    font-size: 1.8em;
+#article-content h1 {
+    font-size: 24px;
 }
 
-div#article-content h2 {
-    font-size: 1.6em;
+#article-content h2 {
+    font-size: 20px;
 }
 
-div#article-content h3 {
-    font-size: 1.4em;
+#article-content h3 {
+    font-size: 18px;
+}
+
+#article-content p {
+    font-size: 14px;
+}
+
+#article-content img {
+    width: 100%;
+}
+
+#article-content blockquote {
+    border-left: .25em solid black;
+    padding-left: 0.1em;
+}
+
+code {
+    font-family: 'Roboto Mono', monospace;
 }

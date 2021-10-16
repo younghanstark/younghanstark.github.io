@@ -3,6 +3,11 @@
 .home-item {
     display: flex;
     align-items: center;
+    font-size: 14px;
+}
+
+#profile h1 {
+    font-size: 32px;
 }
 
 img#profile-photo {
@@ -14,3 +19,4 @@ img#profile-photo {
 div#profile {
     float: left;
 }
+
