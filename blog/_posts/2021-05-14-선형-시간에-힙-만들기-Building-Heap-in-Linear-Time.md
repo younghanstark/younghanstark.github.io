@@ -1,7 +1,7 @@
 ---
 layout: blog
 title:  "선형 시간에 힙 만들기 Building Heap in Linear Time"
-date:   2021-05-14 20:55:00 +0900
+date:   2021-05-14 00:00
 category: problem-solving
 use_math: true
 ---

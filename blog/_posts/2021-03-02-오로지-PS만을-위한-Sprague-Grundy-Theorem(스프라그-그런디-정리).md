@@ -1,7 +1,7 @@
 ---
 layout: blog
 title:  "오로지 PS만을 위한 Sprague-Grundy Theorem(스프라그-그런디 정리)"
-date:   2021-3-2 00:36:00 +0900
+date:   2021-3-2 00:00
 category: problem-solving
 ---
 PS를 하다 보면 Combinatorial Game Theory(조합론적 게임 이론) 분야가 있다. 이번 방학 동안 참가한 알고리즘 캠프에서 알게 된 분야인데, 내용이 상당히 어려웠고 다른 사람들도 어렵게 느낄 것이라는 생각이 들었다.
