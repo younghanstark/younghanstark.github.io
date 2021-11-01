@@ -2,10 +2,6 @@
 
 /* for default.html */
 
-html {
-    -webkit-text-size-adjust: auto;
-}
-
 .container {
     margin: 1%;
     padding: 1%;
@@ -16,8 +12,8 @@ html {
     margin-right: auto;
 }
 
-div#main {
-    padding: 2%;
+.container div {
+    padding: 1%;
 }
 
 div#header {
@@ -37,7 +33,7 @@ a:hover {
 .nav-button#home {
     color: black;
     text-decoration: none;
-    font-size: 32px;
+    font-size: 28px;
     font-weight: bold;
 }
 
