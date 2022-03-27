@@ -10,10 +10,11 @@ layout: default
     <div id="profile">
         <h1>Younghan Park</h1>
         <p>
-            Private First Class<br>
+            Corporal<br>
             Military Police / KATUSA(Korean Augmentation To U. S. Army)<br>
             557th MP CO, 94th MP BN, 19th ESC, Eighth U. S. Army
         </p>
+        <p id="progress"></p>
         <p>
             <a href="mailto:younghanpark@yonsei.ac.kr">Email</a>
             /
@@ -26,5 +27,21 @@ layout: default
     </div>
 </div>
 <div class="home-item">
-    Last updated: Feb 2022
+    Last updated: Apr 2022
 </div>
+
+<script>
+    function printProgress() {
+        var start = new Date(2021, 7, 5);
+        var end = new Date(2023, 1, 4);
+        var today = new Date();
+        
+        var total = end - start;
+        var progress = today - start;
+        var percent = min(100, progress / total * 100);
+
+        document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% Done!";
+    }
+    printProgress();
+    setInterval(printProgress, 500);
+</script>
