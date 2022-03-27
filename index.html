@@ -38,7 +38,7 @@ layout: default
         
         var total = end - start;
         var progress = today - start;
-        var percent = min(100, progress / total * 100);
+        var percent = Math.min(100, progress / total * 100);
 
         document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% Done!";
     }
