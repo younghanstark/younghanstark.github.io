@@ -32,15 +32,15 @@ layout: default
 
 <script>
     function printProgress() {
-        var start = new Date(2021, 7, 5);
-        var end = new Date(2023, 1, 4);
+        var start = new Date(2021, 7 - 1, 5);
+        var end = new Date(2023, 1 - 1, 4);
         var today = new Date();
         
         var total = end - start;
         var progress = today - start;
         var percent = Math.min(100, progress / total * 100);
 
-        document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% Done!";
+        document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% done!";
     }
     printProgress();
     setInterval(printProgress, 500);
