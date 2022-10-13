@@ -10,7 +10,7 @@ layout: default
     <div id="profile">
         <h1>Younghan Park</h1>
         <p>
-            Corporal<br>
+            Sergeant<br>
             Military Police / KATUSA(Korean Augmentation To U. S. Army)<br>
             557th MP CO, 94th MP BN, 19th ESC, Eighth U. S. Army
         </p>
@@ -27,7 +27,7 @@ layout: default
     </div>
 </div>
 <div class="home-item">
-    Last updated: Apr 2022
+    Last updated: Oct 2022
 </div>
 
 <script>
@@ -40,7 +40,13 @@ layout: default
         var progress = today - start;
         var percent = Math.min(100, progress / total * 100);
 
-        document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% done!";
+        if (percent < 100) {
+            document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% done!";
+        }
+        else {
+            document.getElementById("progress").innerHTML = "Finally I ETSed !!!";
+        }
+        
     }
     printProgress();
     setInterval(printProgress, 500);
