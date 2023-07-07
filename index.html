@@ -10,15 +10,14 @@ layout: default
     <div id="profile">
         <h1>Younghan Park</h1>
         <p>
-            Sergeant<br>
-            Military Police / KATUSA(Korean Augmentation To U. S. Army)<br>
-            557th MP CO, 94th MP BN, 19th ESC, Eighth U. S. Army
+            Undergraduate Research Assistant<br>
+            MIRLAB @ Yonsei University, Seoul, South Korea<br>
+            Research Interest: Multimodal Deep Learning
         </p>
-        <p id="progress"></p>
         <p>
             <a href="mailto:younghanpark@yonsei.ac.kr">Email</a>
             /
-            <a href="https://www.instagram.com/young.hann/">Instagram</a>
+            <a href="https://www.instagram.com/younghanstark/">Instagram</a>
             /
             <a href="https://www.linkedin.com/in/younghan-park-805950201/">LinkedIn</a>
             /
@@ -27,27 +26,5 @@ layout: default
     </div>
 </div>
 <div class="home-item">
-    Last updated: Nov 2022
+    Last updated: Jul 2023
 </div>
-
-<script>
-    function printProgress() {
-        var start = new Date(2021, 7 - 1, 5);
-        var end = new Date(2023, 1 - 1, 4);
-        var today = new Date();
-        
-        var total = end - start;
-        var progress = today - start;
-        var percent = Math.min(100, progress / total * 100);
-
-        if (percent < 100) {
-            document.getElementById("progress").innerHTML = "Until ETS: " + percent.toFixed(5) + "% done!";
-        }
-        else {
-            document.getElementById("progress").innerHTML = "Finally I ETSed !!!";
-        }
-        
-    }
-    printProgress();
-    setInterval(printProgress, 500);
-</script>
