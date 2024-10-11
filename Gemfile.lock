@@ -3,9 +3,11 @@ GEM
   specs:
     addressable (2.8.7)
       public_suffix (>= 2.0.2, < 7.0)
+    base64 (0.2.0)
     bigdecimal (3.1.8)
     colorator (1.1.0)
     concurrent-ruby (1.3.4)
+    csv (3.3.0)
     em-websocket (0.5.3)
       eventmachine (>= 0.12.9)
       http_parser.rb (~> 0)
@@ -48,7 +50,9 @@ GEM
     listen (3.9.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
       rb-inotify (~> 0.9, >= 0.9.10)
+    logger (1.6.1)
     mercenary (0.4.0)
+    ostruct (0.6.0)
     pathutil (0.16.2)
       forwardable-extended (~> 2.6)
     public_suffix (6.0.1)
@@ -64,14 +68,20 @@ GEM
     terminal-table (3.0.2)
       unicode-display_width (>= 1.1.1, < 3)
     unicode-display_width (2.6.0)
+    wdm (0.2.0)
     webrick (1.8.2)
 
 PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
+  base64
+  csv
   jekyll
   jekyll-sitemap
+  logger
+  ostruct
+  wdm (>= 0.1.0)
 
 BUNDLED WITH
    2.5.21

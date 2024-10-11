@@ -12,13 +12,12 @@
 /**************/
 /* BASE RULES */
 /**************/
-a {
+.body a {
   color: #1772d0;
   text-decoration: none;
 }
 
-a:focus,
-a:hover {
+.body a:focus, .body a:hover {
   color: #f09228;
   text-decoration: none;
 }
@@ -28,7 +27,7 @@ td,
 th,
 tr,
 p,
-a {
+.body a:not(.header_title) {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-display: auto;
@@ -101,5 +100,49 @@ span.highlight {
 
 // Settled on moving the import of syntax highlighting to the bottom of the CSS
 // ... Otherwise it really bloats up the top of the CSS file and makes it difficult to find the start
-//@import "highlights";
-//@import "svg-icons";
+@import "highlights";
+// @import "svg-icons";
+
+// For the header
+.header_title a {
+  font-family: inherit;
+  font-size: 1.25rem;
+  // font-weight: bold;
+  text-decoration: none;
+  color: black;
+}
+
+.header_items a {
+  font-family: inherit;
+  font-size: 1rem;
+  text-decoration: none;
+  color: black;
+}
+
+.header_items a.active {
+  color: #1772d0;
+}
+
+.header_items a:hover {
+  color: #1772d0;
+}
+
+.header_items li {
+  list-style: none;
+}
+
+// For blog posts
+article img {
+  max-width: 100%;
+}
+
+article blockquote {
+  // background-color: #efefef;
+  padding: 2%;
+  // font-style: italic;
+  border-left: 7px solid black;
+}
+
+article blockquote p {
+  margin: 0;
+}

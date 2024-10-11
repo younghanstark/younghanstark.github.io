@@ -1,0 +1,134 @@
+---
+layout: default
+---
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr style="padding:0px">
+    <td style="padding:2.5%;width:60%;vertical-align:middle">
+        <h1>
+        Younghan Park
+        </h1>
+        <p>I am an undergraduate student majoring computer science at <a href="https://www.yonsei.ac.kr/en_sc/">Yonsei University</a>. My long-term research goal is to build machines that can perceive, understand, and use language in a human-like way. My current areas of interest are:
+        </p>
+        <ul>
+        <li><strong>Multimodal Language Processing</strong>: How can we teach machines to understand the information that arises from the fusion of text and other modalities?</li>
+        <li><strong>Conversational AI</strong>: How should contextual information be processed for human-like conversations with AI? How can machines use this information while generating response?</li>
+        </ul>
+        <p style="text-align:center">
+        Email: younghanpark [at] yonsei [dot] ac [dot] kr<br>
+        <a target="_blank" href="pdfs/cv.pdf">Curriculum Vitae</a>&nbsp;/&nbsp;
+        <a href="https://github.com/younghanstark">GitHub</a>&nbsp;/&nbsp;
+        <!--<a href="https://scholar.google.com/citations?user=GCYG4GoAAAAJ">Google Scholar</a> &nbsp;/&nbsp;-->
+        <a href="https://www.linkedin.com/in/younghan-park/">LinkedIn</a>
+        </p>
+    </td>
+    <td style="padding:2.5%;width:40%;max-width:40%">
+        <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+    </td>
+    </tr>
+</table>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">News</h2>
+<div style="padding:2.5%">
+    <ul style="margin:0">
+    <li>(Jul 2024) I am excited to share that I have been selected as a recipient of the <strong>Presidential Science Scholarship</strong>!</li>
+    </ul>
+</div>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Education</h2>
+<table style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr><td style="width:100%;vertical-align:middle">
+    <h3>Yonsei University</h3>, Seoul, South Korea<br>
+    B.S. in Computer Science, Mar 2020 - Present
+    <p></p> <!-- put an empty paragraph between the rows -->
+    </td></tr>
+    <tr><td style="width:100%;vertical-align:middle">
+    <h3>The University of Texas at Austin</h3>, Austin, Texas, United States<br>
+    Exchange Student in Computer Science, Aug 2023 - May 2024
+    <!-- don't put an empty paragraph after the last row -->
+    </td></tr>
+</table>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Research Experience</h2>
+<table style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr><td style="width:100%;vertical-align:middle">
+    <h3><a href="https://www.nlp.utexas.edu/">NLP and Computational Linguistics Group</a></h3>, The University of Texas at Austin<br>
+    Undergraduate Research Intern, Aug 2023 - Present<br>
+    Advisors: Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a>, Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>
+    <p></p>
+    </td></tr>
+    <tr><td style="width:100%;vertical-align:middle">
+    <h3><a href="https://mirlab.yonsei.ac.kr/">Multimodal AI Lab</a></h3>, Yonsei University<br>
+    Undergraduate Research Intern, Feb 2023 - Aug 2023<br>
+    Advisor: Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>
+    </td></tr>
+</table>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Honors and Awards (Selected)</h2>
+<table style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr><td style="width:100%;vertical-align:middle">
+    <h3>Presidential Science Scholarship</h3>, Korea Student Aid Foundation, Jul 2024 - Present<br>
+    <em>The highest honor an undergraduate STEM student in South Korea can receive - full-ride scholarship with an additional stipend provided each semester.</em>
+    </td></tr>
+</table>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Projects (Selected)</h2>
+<!-- padding: top right bottom left -->
+<p style="padding:1% 2.5% 0% 2.5%;margin:0">
+    Prior to research, I've also had the chance to participate in a lot of fun and interesting projects.
+</p>
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    {% assign sorted_pages = site.pages | sort:"order" %}
+    {% for page in sorted_pages %}
+    {% if page.layout == "project" %}
+    <tr>
+    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
+        <!-- <img src="/tn{{post.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" /> -->
+        <img src="{{page.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+    </td>
+    <td style="padding:2.5%;width:75%;vertical-align:middle">
+        <h3>{{ page.title }}</h3>, {{ page.period }}<br>
+        {% for item in page.links %}
+        <a href="{{ item.url }}">{{ item.title }}</a>{% if forloop.last == false %} / {% endif %}
+        {% endfor %}
+        <br>
+        <em>{{page.description}}</em>
+    </td>
+    </tr>
+    {% endif %}
+    {% endfor %}
+</table>
+
+<h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Misc.</h2>
+<p style="padding:1% 2.5% 0% 2.5%;margin:0">
+    Here are some blog posts and other miscellaneous things I've written or want to share:
+</p>
+<div style="padding:2.5% 2.5% 0% 2.5%">
+    <ul style="margin:0">
+        {% assign sorted_posts = site.posts | sort: "date" | reverse %}
+        {% for post in sorted_posts %}
+        <li>
+            <a href="{{ post.url }}">{{ post.title }}</a>, {{ post.date | date: "%b %Y" }}
+        </li>
+        {% endfor %}
+    </ul>
+</div>
+
+<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    <tr><td style="padding:2.5%">
+    <!-- TODO: apply https://github.com/gjtorikian/jekyll-last-modified-at -->
+    <p>
+        Last updated: Oct 2024<br>
+        Adapted from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's fork</a> of <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>.
+    </p>
+    <p></p>
+    </td></tr>
+    <!--
+    <tr>
+    <td style="padding:0px">
+        <p style="text-align:center;font-size:small;">
+        Design and source code from <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a> and <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's website</a>.
+        </p>
+    </td>
+    </tr>
+    -->
+</table>
