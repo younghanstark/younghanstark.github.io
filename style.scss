@@ -29,17 +29,26 @@ tr,
 p,
 .body a:not(.header_title) {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
+}
+
+.introduction body,
+.introduction td,
+.introduction th,
+.introduction tr,
+.introduction p,
+.introduction .body a:not(.header_title),
+.introduction li {
   font-size: 14px;
   font-display: auto;
 }
 
-strong {
+.introduction strong {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-display: auto;
 }
 
-h2 {
+.introduction h2 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 22px;
   font-display: auto;
@@ -49,7 +58,7 @@ h2 {
   display:inline; 
 }
 
-h3 {
+.introduction h3 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 14px;
   font-weight: 700;
@@ -59,7 +68,7 @@ h3 {
   display:inline; 
 }
 
-h1 {
+.introduction h1 {
   font-family: 'Lato', Verdana, Helvetica, sans-serif;
   font-size: 32px;
   font-weight: normal;
@@ -73,13 +82,13 @@ h1 {
 
 }
 
-.one {
+.introduction .one {
   width: 160px;
   height: 160px;
   position: relative;
 }
 
-.two {
+.introduction .two {
   width: 160px;
   height: 160px;
   position: absolute;
@@ -88,7 +97,7 @@ h1 {
   -webkit-transition: opacity .2s ease-in-out;
 }
 
-.fade {
+.introduction .fade {
   transition: opacity .2s ease-in-out;
   -moz-transition: opacity .2s ease-in-out;
   -webkit-transition: opacity .2s ease-in-out;
@@ -103,11 +112,11 @@ span.highlight {
 @import "highlights";
 // @import "svg-icons";
 
-// For the header
+/* For the header */
 .header_title a {
   font-family: inherit;
   font-size: 1.25rem;
-  // font-weight: bold;
+  /* font-weight: bold; */
   text-decoration: none;
   color: black;
 }
@@ -129,20 +138,4 @@ span.highlight {
 
 .header_items li {
   list-style: none;
-}
-
-// For blog posts
-article img {
-  max-width: 100%;
-}
-
-article blockquote {
-  // background-color: #efefef;
-  padding: 2%;
-  // font-style: italic;
-  border-left: 7px solid black;
-}
-
-article blockquote p {
-  margin: 0;
 }
