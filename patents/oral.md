@@ -1,0 +1,19 @@
+---
+title: "Control Apparatus using Oral Cavity (구강을 이용한 조종장치)"
+author: "K. Hwang*, G. Jang*, W. Jeong*, Y. Kim*, <b>Younghan Park*</b>, J. Yu*"
+venue: "Korea Patent Registration"
+number: "10-2020-0140424"
+status: "Granted"
+image: /images/mouthmouse.jpg
+class: patent
+order: 1
+links:
+    - title: "Google Patents"
+      url: "https://patents.google.com/patent/KR102444613B1"
+    - title: "The Seoul Economic Daily"
+      url: "https://www.sedaily.com/NewsView/1ZAGUJBD63/GK0301"
+    - title: "The Digital Times"
+      url: "https://www.dt.co.kr/contents.html?article_no=2020112602109919039010"
+    - title: "The Korea Economic Daily"
+      url: "https://magazine.hankyung.com/job-joy/article/202012281822b"
+---
