@@ -3,32 +3,27 @@ layout: default
 ---
 
 <div class="introduction">
-<table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    <tr style="padding:0px">
-    <td style="padding:2.5%;width:60%;vertical-align:middle">
-        <h1>
-        Younghan Park
-        </h1>
+<div class="intro-grid">
+    <h1 class="intro-name">Younghan Park</h1>
+    <div class="intro-photo">
+        <img alt="profile photo" src="/images/profile.jpg">
+    </div>
+    <div class="intro-bio">
         <p>I study <b>Natural Language Processing (NLP)</b>, focusing on both written and spoken language. I got my BS in CSE from <a href="https://yonsei.ac.kr/sites/en_sc/index.do">Yonsei University</a>, where I had a fortune to be advised by Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>. Also, I spent my junior year at <a href="https://www.utexas.edu/">The University of Texas at Austin</a>, where I was fortunate to be advised by Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a> and Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>.</p>
         <p>My long-term goal is to build machines that can perceive, understand, and use language in a human-like way. My current areas of interest are:</p>
         <ul>
-        <li><b>Multimodal Language Understanding</b>: How can we teach machines to understand the information that arises from the fusion of text and other modalities? What if the context is complex, long, or unstructured?</li>
-        <li><b>Natural Speech Generation</b>: How should non-textual information, such as contextual and prosodic cues, be modeled and processed when generating human-like responses?</li>
+            <li><b>Multimodal Language Understanding</b>: How can we teach machines to understand the information that arises from the fusion of text and other modalities? What if the context is complex, long, or unstructured?</li>
+            <li><b>Natural Speech Generation</b>: How should non-textual information, such as contextual and prosodic cues, be modeled and processed when generating human-like responses?</li>
         </ul>
-        <p>🎉 I was recently selected as a recipient of the <b>Korean Government Scholarship Program for Study Overseas</b>. With this great opportunity, I will be applying to MS programs in the US for the Fall 2026 semester!</p>
-        <p style="text-align:center">
+    </div>
+    <p class="intro-contact">
         Email: younghanpark [at] yonsei [dot] ac [dot] kr<br>
         <a target="_blank" href="pdfs/cv.pdf">Curriculum Vitae</a>&nbsp;/&nbsp;
         <a href="https://github.com/younghanstark">GitHub</a>&nbsp;/&nbsp;
         <a href="https://scholar.google.com/citations?user=FVOLrDkAAAAJ">Google Scholar</a>&nbsp;/&nbsp;
         <a href="https://www.linkedin.com/in/younghan-park/">LinkedIn</a>
-        </p>
-    </td>
-    <td style="padding:2.5%;width:40%;max-width:40%">
-        <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="/images/profile.jpg">
-    </td>
-    </tr>
-</table>
+    </p>
+</div>
 
 <hr>
 
@@ -80,7 +75,7 @@ layout: default
 </p>
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr>
-        <td style="padding:2% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Preprints</u></b></td>
+        <td colspan="2" style="padding:2% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Preprints</u></b></td>
     </tr>
     {% for item in site.data.publications.preprints %}
     <tr>
@@ -100,7 +95,7 @@ layout: default
     </tr>
     {% endfor %}
     <tr>
-        <td style="padding:0% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Conference Publications</u></b></td>
+        <td colspan="2" style="padding:0% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Conference Publications</u></b></td>
     </tr>
     {% for item in site.data.publications.conferences %}
     <tr>
@@ -120,7 +115,7 @@ layout: default
     </tr>
     {% endfor %}
     <tr>
-        <td style="padding:0% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Patents</u></b></td>
+        <td colspan="2" style="padding:0% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Patents</u></b></td>
     </tr>
     {% for item in site.data.patents %}
     <tr>

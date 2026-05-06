@@ -1,3 +1,9 @@
+- name: "Carnegie Mellon University"
+  location: "Pittsburgh, PA, United States"
+  degree: "M.S. in Machine Learning, School of Computer Science"
+  period: "Aug 2026 - Present"
+  image: /images/education/cmu.png
+  image_alt: "Carnegie Mellon University logo"
 - name: "Yonsei University"
   location: "Seoul, South Korea"
   degree: "B.S. in Computer Science and Engineering"

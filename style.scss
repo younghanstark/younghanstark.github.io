@@ -82,6 +82,60 @@ p,
 
 }
 
+.intro-grid {
+  display: grid;
+  grid-template-columns: 60% 40%;
+  grid-template-areas:
+    "name    photo"
+    "bio     photo"
+    "contact contact";
+  align-items: start;
+  padding: 2.5% 0;
+  box-sizing: border-box;
+}
+
+.intro-grid > * {
+  padding: 0 2.5%;
+  box-sizing: border-box;
+  margin: 0;
+  min-width: 0;
+}
+
+.intro-grid .intro-name { grid-area: name; }
+.intro-grid .intro-bio { grid-area: bio; }
+.intro-grid .intro-photo {
+  grid-area: photo;
+  align-self: center;
+}
+.intro-grid .intro-photo img {
+  width: 100%;
+  max-width: 100%;
+  height: auto;
+  border-radius: 50%;
+  display: block;
+}
+.intro-grid .intro-contact {
+  grid-area: contact;
+  text-align: center;
+  padding-top: 1em;
+}
+
+@media (max-width: 640px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "name"
+      "photo"
+      "bio"
+      "contact";
+  }
+  .intro-grid .intro-photo {
+    max-width: 60%;
+    justify-self: center;
+    padding: 0;
+  }
+}
+
 .introduction .one {
   width: 160px;
   height: 160px;
