@@ -1,0 +1,41 @@
+- title: "RL Agent for Multi-turn Negotiation in Chat Conversations"
+  period: "Spring 2024"
+  image: /images/projects/sp24_rl_fp.png
+  links:
+    - title: "report"
+      url: "pdfs/projects/sp24_rl_fp_report.pdf"
+    - title: "demo (YouTube)"
+      url: "https://www.youtube.com/watch?v=xPCUbzo2v6w"
+    - title: "code"
+      url: "https://github.com/younghanstark/multi-turn-rl"
+  description: "Built a multi-turn negotiation agent by fine-tuning an LLM to propose multiple candidate utterances and buy prices per turn. Trained offline RL agents from model response representations."
+
+- title: "Robust Speaker Diarization under Real-world Noise"
+  period: "Fall 2023"
+  image: /images/projects/fa23_slt_fp.png
+  links:
+    - title: "report"
+      url: "pdfs/projects/fa23_slt_fp_report.pdf"
+  description: "Built a speaker diarization pipeline and evaluated 11 preprocessing configurations, including source separation and speech enhancement, under synthetic background noise and crosstalk."
+
+- title: "CO2Gather"
+  period: "Jan 2022 - Feb 2022"
+  image: /images/projects/co2gather.png
+  links:
+    - title: "project page"
+      url: "https://www.notion.so/yonsooh/CO2Gather-cc2bad9748644a808f60441bd5347c3c"
+    - title: "code"
+      url: "https://github.com/younghanstark/2022_kpmg_pinkcowlab"
+  description: "An NLP software analyzes card logs to automatically calculate potential savings, fostering sustainable collaboration between consumers, businesses, and governments."
+  award: "<b>Top 2 Winner</b>, KPMG Ideathon Challenge 2022 National Round, KPMG Korea"
+
+- title: "MaGam"
+  period: "Jan 2021 - Feb 2021"
+  image: /images/projects/magam.png
+  links:
+    - title: "project page"
+      url: "https://www.notion.so/yonsooh/37dde8162c0343b8ab1d9254657e7c71"
+    - title: "code"
+      url: "https://github.com/younghanstark/kpmg_pinkcowlab"
+  description: "A computer vision-based full-stack web application for highly accurate mask detection by addressing the challenge of limited data using both classical and modern features."
+  award: "<b>Top 3 Winner</b>, KPMG Ideathon Challenge 2021 National Round, KPMG Korea"

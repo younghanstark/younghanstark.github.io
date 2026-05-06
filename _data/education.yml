@@ -1,0 +1,12 @@
+- name: "Yonsei University"
+  location: "Seoul, South Korea"
+  degree: "B.S. in Computer Science and Engineering"
+  period: "Mar 2020 - Aug 2025"
+  image: /images/education/yonsei.jpg
+  image_alt: "Yonsei University logo"
+- name: "The University of Texas at Austin"
+  location: "Austin, TX, United States"
+  degree: "Exchange Student, Computer Science"
+  period: "Aug 2023 - May 2024"
+  image: /images/education/ut.png
+  image_alt: "UT Austin logo"

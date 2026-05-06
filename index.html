@@ -25,7 +25,7 @@ layout: default
         </p>
     </td>
     <td style="padding:2.5%;width:40%;max-width:40%">
-        <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="images/profile.jpg">
+        <img style="width:100%;max-width:100%;border-radius:50%;" alt="profile photo" src="/images/profile.jpg">
     </td>
     </tr>
 </table>
@@ -35,12 +35,9 @@ layout: default
 <h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">News</h2>
 <div style="padding:2.5%">
     <ul style="margin: 0; padding-left: 2.5%">
-        <li>(Dec 2025) I started my internship at <b>KRAFTON Inc.</b>, as a deep learning engineer intern in the AI Research Division.</li>
-        <li>(Oct 2025) I completed my internship at <b>NAVER Cloud Corporation</b>.</li>
-        <li>(Aug 2025) I <b>graduated with high honors</b> at Yonsei University.</li>
-        <li>(Jul 2025) I have been selected as a recipient of the <b>Korean Government Scholarship Program for Study Overseas (대한민국 정부 국비유학)</b>.</li>
-        <li>(Jul 2025) My first first-authored paper is accepted at <b>COLM 2025</b>.</li>
-        <li>(Jul 2024) I am excited to share that I have been selected as a recipient of the <b>Presidential Science Scholarship (대통령과학장학금)</b>.</li>
+        {% for item in site.data.news %}
+        <li>({{ item.date }}) {{ item.html }}</li>
+        {% endfor %}
     </ul>
 </div>
 
@@ -48,24 +45,17 @@ layout: default
 
 <h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Education</h2>
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    {% for item in site.data.education %}
     <tr>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3>Yonsei University</h3>, Seoul, South Korea<br>
-    B.S. in Computer Science and Engineering, Mar 2020 - Aug 2025
+    <h3>{{ item.name }}</h3>, {{ item.location }}<br>
+    {{ item.degree }}, {{ item.period }}
     </td>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/education/yonsei.jpg" alt="Yonsei University logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
+        <img src="{{ item.image }}" alt="{{ item.image_alt }}" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
     </td>
     </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3>The University of Texas at Austin</h3>, Austin, TX, United States<br>
-    Exchange Student, Computer Science, Aug 2023 - May 2024
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/education/ut.png" alt="UT Austin logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
+    {% endfor %}
 </table>
 
 <hr>
@@ -73,34 +63,12 @@ layout: default
 <h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Honors and Awards</h2>
 <div style="padding:2.5%">
     <ul style="margin: 0; padding-left: 2.5%">
+        {% for item in site.data.honors %}
         <li>
-            <b>The Korean Government Scholarship Program for Study Overseas</b>, <i>Starting Fall 2026</i><br>
-            $80,000 in pursuit of master's degree in US (selected as one of three recipients in the <i>digital</i> category)
+            {{ item.title }}{% if item.period %}, <i>{{ item.period }}</i>{% endif %}{% if item.detail %}<br>
+            {{ item.detail }}{% endif %}
         </li>
-        <li>
-            <b>Presidential Science Scholarship</b>, <i>Mar 2024 - Aug 2025</i><br>
-            Full tuition and stipend for junior and senior years (selected as one of 60 students nationwide)
-        </li>
-        <li>
-            <b>Graduation with High Honors</b>, Yonsei University, <i>Aug 2025</i><br>
-            Awarded to 2 out of 88 students in the College of Computing
-        </li>
-        <li>
-            <b>High Honors</b>, Yonsei University, <i>Fall 2024</i>
-        </li>
-        <li>
-            <b>Merit-based Scholarship</b>, Yonsei University, <i>Spring 2021, Spring 2023, Fall 2023</i>
-        </li>
-        <li>
-            <b>University Honors</b>, The University of Texas at Austin, <i>Fall 2023</i>
-        </li>
-        <li>
-            <b>Honors</b>, Yonsei University, <i>Fall 2020, Spring 2021, Spring 2023</i>
-        </li>
-        <li>
-            <b>Best Tutor</b>, Yonsei University, <i>Spring 2021</i><br>
-            Yonsei CSI2100: Computer Programming
-        </li>
+        {% endfor %}
     </ul>
 </div>
 
@@ -114,71 +82,62 @@ layout: default
     <tr>
         <td style="padding:2% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Preprints</u></b></td>
     </tr>
-    {% assign sorted_pages = site.pages | sort:"order" %}
-    {% for page in sorted_pages reversed %}
-    {% if page.class == "preprint" %}
+    {% for item in site.data.publications.preprints %}
     <tr>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="{{page.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+        <img src="{{ item.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
     </td>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-        <h3>{{ page.title }}</h3><br>
-        {{ page.author }}<br>
-        Under Review at <i>{{ page.venue }}</i>, {{ page.year }}<br>
-        {% for item in page.links %}
-        <a href="{{ item.url }}">{{ item.title }}</a>{% if forloop.last == false %} / {% endif %}
+        <h3>{{ item.title }}</h3><br>
+        {{ item.author }}<br>
+        Under Review at <i>{{ item.venue }}</i>, {{ item.year }}<br>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>{% if forloop.last == false %} / {% endif %}
         {% endfor %}
         <br>
-        <em>{{page.description}}</em>
+        <em>{{ item.description }}</em>
     </td>
     </tr>
-    {% endif %}
     {% endfor %}
     <tr>
         <td style="padding:0% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Conference Publications</u></b></td>
     </tr>
-    {% assign sorted_pages = site.pages | sort:"order" %}
-    {% for page in sorted_pages reversed %}
-    {% if page.class == "conference" %}
+    {% for item in site.data.publications.conferences %}
     <tr>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="{{page.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+        <img src="{{ item.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
     </td>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-        <h3>{{ page.title }}</h3><br>
-        {{ page.author }}<br>
-        <i>{{ page.venue }}</i>, {{ page.year }}<br>
-        {% for item in page.links %}
-        <a href="{{ item.url }}">{{ item.title }}</a>{% if forloop.last == false %} / {% endif %}
+        <h3>{{ item.title }}</h3><br>
+        {{ item.author }}<br>
+        <i>{{ item.venue }}</i>, {{ item.year }}<br>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>{% if forloop.last == false %} / {% endif %}
         {% endfor %}
         <br>
-        <em>{{page.description}}</em>
+        <em>{{ item.description }}</em>
     </td>
     </tr>
-    {% endif %}
     {% endfor %}
     <tr>
         <td style="padding:0% 2.5% 0% 2.5%;width:25%;vertical-align:middle;min-width:120px"><b><u>Patents</u></b></td>
     </tr>
-    {% assign sorted_pages = site.pages | sort:"order" %}
-    {% for page in sorted_pages reversed %}
-    {% if page.class == "patent" %}
+    {% for item in site.data.patents %}
     <tr>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="{{page.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+        <img src="{{ item.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
     </td>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-        <h3>{{ page.title }}</h3><br>
-        {{ page.author }}<br>
-        <i>{{ page.venue }}</i> No. {{ page.number }}. {{ page.status }}.<br>
-        {% for item in page.links %}
-        <a href="{{ item.url }}">{{ item.title }}</a>{% if forloop.last == false %} / {% endif %}
+        <h3>{{ item.title }}</h3><br>
+        {{ item.author }}<br>
+        <i>{{ item.venue }}</i> No. {{ item.number }}. {{ item.status }}.<br>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>{% if forloop.last == false %} / {% endif %}
         {% endfor %}
         <br>
-        <em>{{page.description}}</em>
+        <em>{{ item.description }}</em>
     </td>
     </tr>
-    {% endif %}
     {% endfor %}
 </table>
 
@@ -186,89 +145,40 @@ layout: default
 
 <h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Experience</h2>
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    {% for item in site.data.experience %}
     <tr>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-        <h3><a href="https://www.krafton.com/en/">KRAFTON Inc.</a></h3> (The Publisher of PUBG: Battlegrounds), <i>Dec 2025 - Present</i><br>
-        Deep Learning Engineer Intern, AI Research Division<br>
+    <h3>{% if item.name_url %}<a href="{{ item.name_url }}">{{ item.name }}</a>{% else %}{{ item.name }}{% endif %}</h3>{{ item.suffix }}, <i>{{ item.period }}</i><br>
+    {{ item.role }}{% unless item.no_trailing_br %}<br>{% endunless %}
     </td>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/experience/krafton.png" alt="KRAFTON logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
+        <img src="{{ item.image }}" alt="{{ item.image_alt }}" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
     </td>
     </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3><a href="https://www.navercloudcorp.com/en/">Naver Cloud Corporation</a></h3>, <i>Jun 2025 - Oct 2025</i><br>
-    Research Intern, Voice Technology<br>
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/experience/naver_cloud.png" alt="Naver Cloud logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3><a href="https://www.nlp.utexas.edu/">NLP Group</a></h3>, The University of Texas at Austin, <i>Aug 2023 - May 2025</i><br>
-    Visiting Student (Advisors: Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a>, Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>)
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/education/ut.png" alt="UT Austin logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3><a href="https://pi.snu.ac.kr/">Multimodal Intelligence Research Lab</a></h3>, Yonsei University, <i>Feb 2023 - Aug 2023</i><br>
-    Undergraduate Research Intern (Advisor: Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>)
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/education/yonsei.jpg" alt="Yonsei University logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3>Korean Augmentation to the US Army (KATUSA)</h3>, <i>Jul 2021 - Jan 2023</i><br>
-    Specialty: Military Police, Final Rank: Sergeant<br>
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/experience/eighth_army.png" alt="Eighth Army logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
-    <tr>
-    <td style="padding:2.5%;width:75%;vertical-align:middle">
-    <h3>MouthMouse</h3>, <i>Apr 2020 - Jul 2021</i><br>
-    Co-Founder, Software Engineer<br>
-    </td>
-    <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="images/experience/mouthmouse.png" alt="MouthMouse logo" style="height:80px; width:auto; max-width:120px; object-fit:contain; display:block; margin-left:auto;" />
-    </td>
-    </tr>
+    {% endfor %}
 </table>
 
 <hr>
 
 <h2 style="padding:2.5%;width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">Selected Projects</h2>
-<!-- <p style="padding:1% 2.5% 0% 2.5%;margin:0">
-    Prior to research, I've also had the chance to participate in a lot of fun and interesting projects.
-</p> -->
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
-    {% assign sorted_pages = site.pages %}
-    {% for page in sorted_pages reversed %}
-    {% if page.layout == "project" %}
+    {% for item in site.data.projects %}
     <tr>
     <td style="padding:2.5%;width:25%;vertical-align:middle;min-width:120px">
-        <img src="{{page.image}}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
+        <img src="{{ item.image }}" alt="project image" style="width:auto; height:auto; max-width:100%;" />
     </td>
     <td style="padding:2.5%;width:75%;vertical-align:middle">
-        <h3>{{ page.title }}</h3>, {{ page.period }}<br>
-        {% for item in page.links %}
-        <a href="{{ item.url }}">{{ item.title }}</a>{% if forloop.last == false %} / {% endif %}
+        <h3>{{ item.title }}</h3>, {{ item.period }}<br>
+        {% for link in item.links %}
+        <a href="{{ link.url }}">{{ link.title }}</a>{% if forloop.last == false %} / {% endif %}
         {% endfor %}
         <br>
-        <i>{{page.description}}</i>
-        {% if page.award %}
-        <br>{{ page.award }}
+        <i>{{ item.description }}</i>
+        {% if item.award %}
+        <br>{{ item.award }}
         {% endif %}
     </td>
     </tr>
-    {% endif %}
     {% endfor %}
 </table>
 
@@ -291,7 +201,6 @@ layout: default
 
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr><td style="padding:2.5%">
-    <!-- TODO: apply https://github.com/gjtorikian/jekyll-last-modified-at -->
     <p>
         Last updated: Dec 2025<br>
         Adapted from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's fork</a> of <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>.

@@ -87,9 +87,5 @@ exclude:
   - LICENSE
   - README.md
   - CNAME
-  - command.txt
-  - todo.txt
-  - _temp/index.html
-  - _temp/
 
 future: true

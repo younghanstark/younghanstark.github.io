@@ -1,0 +1,39 @@
+- name: "KRAFTON Inc."
+  name_url: "https://www.krafton.com/en/"
+  suffix: " (The Publisher of PUBG: Battlegrounds)"
+  period: "Dec 2025 - Present"
+  role: "Deep Learning Engineer Intern, AI Research Division"
+  image: /images/experience/krafton.png
+  image_alt: "KRAFTON logo"
+- name: "Naver Cloud Corporation"
+  name_url: "https://www.navercloudcorp.com/en/"
+  period: "Jun 2025 - Oct 2025"
+  role: "Research Intern, Voice Technology"
+  image: /images/experience/naver_cloud.png
+  image_alt: "Naver Cloud logo"
+- name: "NLP Group"
+  name_url: "https://www.nlp.utexas.edu/"
+  suffix: ", The University of Texas at Austin"
+  period: "Aug 2023 - May 2025"
+  role: 'Visiting Student (Advisors: Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a>, Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>)'
+  no_trailing_br: true
+  image: /images/education/ut.png
+  image_alt: "UT Austin logo"
+- name: "Multimodal Intelligence Research Lab"
+  name_url: "https://pi.snu.ac.kr/"
+  suffix: ", Yonsei University"
+  period: "Feb 2023 - Aug 2023"
+  role: 'Undergraduate Research Intern (Advisor: Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>)'
+  no_trailing_br: true
+  image: /images/education/yonsei.jpg
+  image_alt: "Yonsei University logo"
+- name: "Korean Augmentation to the US Army (KATUSA)"
+  period: "Jul 2021 - Jan 2023"
+  role: "Specialty: Military Police, Final Rank: Sergeant"
+  image: /images/experience/eighth_army.png
+  image_alt: "Eighth Army logo"
+- name: "MouthMouse"
+  period: "Apr 2020 - Jul 2021"
+  role: "Co-Founder, Software Engineer"
+  image: /images/experience/mouthmouse.png
+  image_alt: "MouthMouse logo"
