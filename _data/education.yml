@@ -1,18 +1,18 @@
 - name: "Carnegie Mellon University"
   location: "Pittsburgh, PA, United States"
-  degree: "M.S. in Machine Learning, School of Computer Science"
-  period: "Aug 2026 - Present"
+  degree: "MS in Machine Learning, School of Computer Science"
+  period: "Aug 2026 - Dec 2027 (Expected)"
   image: /images/education/cmu.png
   image_alt: "Carnegie Mellon University logo"
 - name: "Yonsei University"
   location: "Seoul, South Korea"
-  degree: "B.S. in Computer Science and Engineering"
+  degree: "BS in Computer Science and Engineering, College of Computing"
   period: "Mar 2020 - Aug 2025"
   image: /images/education/yonsei.jpg
   image_alt: "Yonsei University logo"
 - name: "The University of Texas at Austin"
   location: "Austin, TX, United States"
-  degree: "Exchange Student, Computer Science"
+  degree: "Exchange Student (Major: Computer Science)"
   period: "Aug 2023 - May 2024"
   image: /images/education/ut.png
   image_alt: "UT Austin logo"

@@ -103,6 +103,9 @@ p,
 
 .intro-grid .intro-name { grid-area: name; }
 .intro-grid .intro-bio { grid-area: bio; }
+.intro-grid .intro-bio ul {
+  padding-inline-start: 1em;
+}
 .intro-grid .intro-photo {
   grid-area: photo;
   align-self: center;

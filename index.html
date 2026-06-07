@@ -9,11 +9,11 @@ layout: default
         <img alt="profile photo" src="/images/profile.jpg">
     </div>
     <div class="intro-bio">
-        <p>I study <b>Natural Language Processing (NLP)</b>, focusing on both written and spoken language. I got my BS in CSE from <a href="https://yonsei.ac.kr/sites/en_sc/index.do">Yonsei University</a>, where I had a fortune to be advised by Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>. Also, I spent my junior year at <a href="https://www.utexas.edu/">The University of Texas at Austin</a>, where I was fortunate to be advised by Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a> and Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>.</p>
-        <p>My long-term goal is to build machines that can perceive, understand, and use language in a human-like way. My current areas of interest are:</p>
+        <p>I am Younghan Park, a master's student at <a href="https://www.cmu.edu/">Carnegie Mellon University</a>'s <a href="https://www.ml.cmu.edu/">Machine Learning Department</a>. I got my BS in CSE from <a href="https://yonsei.ac.kr/sites/en_sc/index.do">Yonsei University</a>, where I had a fortune to be advised by Prof. <a href="https://yj-yu.github.io/home/">Youngjae Yu</a>. Also, I spent my junior year at <a href="https://www.utexas.edu/">The University of Texas at Austin</a>, where I was fortunate to be advised by Prof. <a href="https://eunsol.github.io/">Eunsol Choi</a> and Prof. <a href="https://www.cs.utexas.edu/~harwath/">David Harwath</a>.</p>
+        <p>My long-term goal is to build machines (including robots!) that can perceive the world and understand/use language in a human-like way. My current areas of interest are:</p>
         <ul>
-            <li><b>Multimodal Language Understanding</b>: How can we teach machines to understand the information that arises from the fusion of text and other modalities? What if the context is complex, long, or unstructured?</li>
-            <li><b>Natural Speech Generation</b>: How should non-textual information, such as contextual and prosodic cues, be modeled and processed when generating human-like responses?</li>
+            <li><b>Multimodal Language Understanding</b>: How can we teach machines to understand the information that arises from the fusion of modalities? What if the context is complex, long, or unstructured?</li>
+            <li><b>Embodied Language Grounding</b>: How can we ground natural language in a machine's perception and action, so that it understands and carries out human instructions as intended?</li>
         </ul>
     </div>
     <p class="intro-contact">
@@ -74,8 +74,9 @@ layout: default
     *: equal contribution, ^: equal advising
 </p>
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
+    {% if site.data.publications.preprints and site.data.publications.preprints.size > 0 %}
     <tr>
-        <td colspan="2" style="padding:2% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Preprints</u></b></td>
+        <td colspan="2" style="padding:2% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Preprints / Under Review</u></b></td>
     </tr>
     {% for item in site.data.publications.preprints %}
     <tr>
@@ -94,8 +95,9 @@ layout: default
     </td>
     </tr>
     {% endfor %}
+    {% endif %}
     <tr>
-        <td colspan="2" style="padding:0% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Conference Publications</u></b></td>
+        <td colspan="2" style="padding:2% 2.5% 0% 2.5%;vertical-align:middle"><b><u>Conference Publications / Workshop Papers</u></b></td>
     </tr>
     {% for item in site.data.publications.conferences %}
     <tr>
@@ -197,7 +199,7 @@ layout: default
 <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;">
     <tr><td style="padding:2.5%">
     <p>
-        Last updated: Dec 2025<br>
+        Last updated: Jun 2026<br>
         Adapted from <a style="font-size:small;" href="https://leonidk.com/">Leonid Keselman's fork</a> of <a style="font-size:small;" href="https://jonbarron.info">Jon Barron's website</a>.
     </p>
     <p></p>

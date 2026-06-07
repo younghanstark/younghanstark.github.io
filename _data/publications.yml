@@ -1,4 +1,14 @@
 preprints:
+  - title: "Phonemizing User-Generated Text: A Benchmark, Taxonomy, and Compositional Approach"
+    author: "Minju Jeon, <b>Younghan Park</b>, Han Sung Park, Jong-Hwan Kim, Dong-Jin Kim, Hoyeon Lee"
+    venue: "Empirical Methods in Natural Language Processing (EMNLP)"
+    year: "2026"
+    image: /images/publications/ugt_g2p.png
+    links:
+      - title: "paper (coming soon)"
+        url: ""
+
+conferences:
   - title: "LLM-Based Multi-Reference Evaluation for Efficient and Robust Assessment of Phrase Break Annotations"
     author: "<b>Younghan Park*</b>, Hoyeon Lee*, Hawon Jeong, Jong-Hwan Kim"
     venue: "Interspeech"
@@ -8,7 +18,15 @@ preprints:
       - title: "paper (coming soon)"
         url: ""
 
-conferences:
+  - title: "AgentVidBench: A Multi-Hop Video Question Answering Benchmark for Evaluating MLLM Agents"
+    author: "Seoyeon An*, Hyeonseo Jang*, Minsu Kim*, Chanho Lee, <b>Younghan Park</b>, Kangwook Lee"
+    venue: "Workshop on Failure Modes of Agentic AI @ International Conference on Machine Learning (FAGEN@ICML)"
+    year: "2026"
+    image: /images/publications/agentvidbench.png
+    links:
+      - title: "paper (coming soon)"
+        url: ""
+
   - title: "Rhapsody: A Dataset for Highlight Detection in Podcasts"
     author: "<b>Younghan Park</b>, Anuj Diwan, David Harwath^, Eunsol Choi^"
     venue: "Conference on Language Modeling (COLM)"
@@ -21,3 +39,5 @@ conferences:
         url: "pdfs/pubs/rhapsody-poster.pdf"
       - title: "code"
         url: "https://github.com/younghanstark/rhapsody"
+      - title: "dataset"
+        url: "https://huggingface.co/datasets/yhpark/rhapsody"
