@@ -15,8 +15,8 @@ conferences:
     year: "2026"
     image: /images/publications/llm_ref_pb.png
     links:
-      - title: "paper (coming soon)"
-        url: ""
+      - title: "paper"
+        url: "https://arxiv.org/abs/2606.21098"
 
   - title: "AgentVidBench: A Multi-Hop Video Question Answering Benchmark for Evaluating MLLM Agents"
     author: "Seoyeon An*, Hyeonseo Jang*, Minsu Kim*, Chanho Lee, <b>Younghan Park</b>, Kangwook Lee"
